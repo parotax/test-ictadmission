@@ -12,7 +12,7 @@ const useEntries = () => {
 	useEffect(() => {
 		setIsLoading(true)
 
-		fetch('/test-ictadmission/sample-data/data.json')
+		fetch('/test-ictadmission/data.json')
 			.then(async response => {
 				const payload = await response.json()
 				const parsed = z.array(entrySchema).safeParse(payload)
